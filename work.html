@@ -7,7 +7,18 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+      <script>
+if(window.location.hostname === "pdfobject.com"){
+	let s = document.createElement("script");
+	s.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-1394306-6");
+	s.async = true;
+	document.head.appendChild(s);
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag("js", new Date());
+	gtag("config", "UA-1394306-6");
+}
+</script>
     <title>Work</title>
   </head>
   <body>
@@ -25,46 +36,45 @@
 
 
      <br><br>
-     <h1 class="font-monospace text-center"Wounded pillows, the duology</h1>
-   <!-- <embed src="https://drive.google.com/file/d/12L6rINvolQ6yB33JPWo1WwdIbi5HhNSP/view?usp=sharing" type="application/pdf" width="100%" height="1000px"> <embed/>
--->
-<br><br>
+     
 <h1 class="font-monospace text-center"></h1>
-<!--<a class="iframeLink" href="https://drive.google.com/file/d/12L6rINvolQ6yB33JPWo1WwdIbi5HhNSP/view?usp=sharing"> User guide </a>-->
-  
-  
   <!-- Add your iframes with pdf sources -->
-  <h3>Dark romance drama   </h3>
-  <iframe src="assets/works/swa2021.08.04.08.51.08.pdf" width="100%" height="500px">
+  <div id="pdf1" class="pdfobject-container">
+  <h3 class="font-monospace text-center">Dark romance drama   </h3>
+<!--   <iframe src="assets/works/swa2021.08.04.08.51.08.pdf" width="100%" height="500px"> -->
+    <embed src="assets/works/swa2021.08.04.08.51.08.pdf" type="application/pdf" 
+           class="pdfobject" type="application/pdf" title="Embedded PDF" style="overflow: auto; width: 100%; height: 100%;">
+  </div>
     <br>
-  <h3>Screen Play - II </h3>
-  <iframe src="/assets/works/swa2021-04-18%20063139.pdf" width ="100%" height="500px">
+  <div id="pdf2" class="pdfobject-container">
+  <h3 class="font-monospace text-center">Screen Play - II </h3>
+<!--   <iframe src="/assets/works/swa2021-04-18%20063139.pdf" width ="100%" height="500px"> -->
+    <embed src="assets/works/swa2021-04-18%20063139.pdf" class="pdfobject" type="application/pdf" title="Embedded PDF" style="overflow: auto; width: 100%; height: 100%;">
+  </div>
     <br>
-    <h3>Screen Play - III </h3>
-  <iframe src="assets/works/draft%20dog.pdf" width ="100%" height="500px">
-<br><br>
-
-
-        
+    <div id="pdf3" class="pdfobject-container">
+    <h3 class="font-monospace text-center">Screen Play - III </h3>
+<!--   <iframe src="assets/works/draft%20dog.pdf" width ="100%" height="500px"> -->
+    <embed src="assets/works/draft%20dog.pdf" class="pdfobject" type="application/pdf" title="Embedded PDF" style="overflow: auto; width: 100%; height: 100%;">
+  </div>
+<br><br>    
 </div>
-
-
-
-
-
-
-
-
-    
-    
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+var options = {
+	page: 3,
+	pdfOpenParams: {
+		navpanes: 1,
+		view: "FitH",
+		pagemode: "thumbs"
+	}
+};
+
+PDFObject.embed("assets/works/swa2021.08.04.08.51.08.pdf", "#pdf1", options);
+PDFObject.embed("assets/works/swa2021-04-18%20063139.pdf", "#pdf2");
+PDFObject.embed("assets/works/draft%20dog.pdf", "#pdf3");
+</script>
+</body>
 </html>
